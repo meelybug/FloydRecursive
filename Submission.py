@@ -2,6 +2,20 @@
 n = 3
 # Use infinity as the large enough value
 inf = 99999
+printSolution(dist)
+
+# A function to print the solution in matrix format
+def printSolution(dist):
+    print(" This matrix shows the shortest distances between each pair of nodes (vertices)")
+    for i in range(n):
+        for j in range(n):
+            if(dist[i][j] == inf):
+                print("%7d\t" % (dist[i][j]), end= ' ')
+            else:
+                print("%7d\t" % (dist[i][j]), end= ' ')
+            if j == n-1:
+                print()
+
 # Define the function and the parameters
 def FloydRecursive(graph):
     # Define distance as the shortest route between each node
@@ -14,17 +28,8 @@ def FloydRecursive(graph):
                 dist[i][j] = min(dist[i][j],
                                  dist[i][k] + dist [k][j]
                                  )
-printSolution(dist)
 
-# A function to print the solution in matrix format
-def printSolution(dist):
-    print(" This matrix shows the shortest distances between each pair of nodes (vertices)")
-    for i in range(n):
-        for j in range(n):
-            if(dist[i][j] == INF):
-                print("%7d\t" % (dist[i][j]), end= ' ')
-            else:
-                print("%7d\t" % (dist[i][j], end= ' ')
-            if j == n-1:
-                print()
+
+#Call the function
+FloydRecursive(graph)
 
