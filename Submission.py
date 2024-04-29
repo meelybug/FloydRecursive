@@ -31,7 +31,7 @@ def FloydRecursive(graph):
 
 graph = [[0, 5, inf, 10],
          [inf, 0, 3, inf],
-         [inf, inf, 0,   1],
+         [inf, inf, 0, 1],
          [inf, inf, inf, 0]
          ]
 
