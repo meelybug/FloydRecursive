@@ -16,3 +16,15 @@ def FloydRecursive(graph):
                                  )
 printSolution(dist)
 
+# A function to print the solution in matrix format
+def printSolution(dist):
+    print(" This matrix shows the shortest distances between each pair of nodes (vertices)")
+    for i in range(n):
+        for j in range(n):
+            if(dist[i][j] == INF):
+                print("%7d\t" % (dist[i][j]), end= ' ')
+            else:
+                print("%7d\t" % (dist[i][j], end= ' ')
+            if j == n-1:
+                print()
+
