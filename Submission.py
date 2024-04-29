@@ -14,4 +14,5 @@ def FloydRecursive(graph):
                 dist[i][j] = min(dist[i][j],
                                  dist[i][k] + dist [k][j]
                                  )
+printSolution(dist)
 
