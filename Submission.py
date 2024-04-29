@@ -1,5 +1,6 @@
 # Define the number of nodes
 n = 3
-
+# Use infinity as the large enough value
+inf = 99999
 # Define the function and the parameters
-def FloydRecursive(distance, start_node, intermediate, end_node)
+def FloydRecursive(graph)
