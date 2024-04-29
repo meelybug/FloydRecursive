@@ -2,7 +2,6 @@
 n = 3
 # Use infinity as the large enough value
 inf = 99999
-printSolution(dist)
 
 # A function to print the solution in matrix format
 def printSolution(dist):
@@ -24,11 +23,17 @@ def FloydRecursive(graph):
     for k in range(n):
         for i in range(n):
             for j in range(n):
-                # Account for k being between i and j on shortest distance path
-                dist[i][j] = min(dist[i][j],
+                    # Account for k being between i and j on shortest distance path
+                    dist[i][j] = min(dist[i][j],
                                  dist[i][k] + dist [k][j]
                                  )
 
+
+graph = [[0, 5, inf, 10],
+         [inf, 0, 3, inf],
+         [inf, inf, 0,   1],
+         [inf, inf, inf, 0]
+         ]
 
 #Call the function
 FloydRecursive(graph)
